@@ -16,17 +16,26 @@
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0d0b0a" />
+    <!-- the model is the biggest download: start it with the page, not after the scripts -->
+    <link rel="preload" href="./models/room.glb" as="fetch" type="model/gltf-binary" crossorigin="anonymous" />
+    <style>
+      /* shown until the app's own loading screen takes over */
+      html, body { margin: 0; height: 100%; background: #0d0b0a; }
+      .boot { position: fixed; inset: 0; display: grid; place-content: center; gap: 10px; text-align: center;
+        color: #f3e9dc; font: 700 28px/1.2 'Space Grotesk', system-ui, sans-serif; }
+      .boot small { font: 400 13px 'IBM Plex Mono', ui-monospace, monospace; color: #9a8f82; }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-BDL13dVK.js"></script>
+    <script type="module" crossorigin src="./assets/index-BGhUGZCR.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-pyPKr3Vg.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="boot">Mihai Zamfir<small>Loading the room…</small></div></div>
     <noscript>This site is a 3D room and needs JavaScript. A plain CV is coming soon.</noscript>
   </body>
 </html>
